@@ -1,0 +1,21 @@
+body,
+html,
+* {
+    font-size: 10px;
+}
+
+.card {
+    width: 30%;
+    height: 500px;
+    background-color: aqua;
+    margin: 20px auto;
+}
+
+.container {
+    width: 90vw;
+    background-color: rgb(204, 245, 255);
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
