@@ -5,8 +5,8 @@ html,
 }
 
 .card {
-    width: 22%;
-    height: 525px;
+    width: 22% auto;
+    height: 525px auto;
     background-color: aqua;
     margin: 20px auto;
     box-shadow: 5px 5px 5px rgb(0, 168, 190);
@@ -26,11 +26,11 @@ html,
 }
 
 .img {
+    object-fit: cover;
     width: 18vw;
     height: auto;
     padding: 1vw;
     display: flex;
-    object-fit: cover;
     object-position: center;
     border-radius: 10%;
 }
@@ -39,12 +39,18 @@ html,
     width: auto;
     height: auto;
     padding: 1vw;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 
 .bodytext {
     width: auto;
-  text-align: center;
-  font-family: Tahoma, Helvetica, Arial, sans-serif;
+    text-align: center;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
 }
 @media screen and (max-width: 600px) {
     .container {
