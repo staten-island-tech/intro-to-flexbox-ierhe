@@ -46,3 +46,17 @@ html,
   text-align: center;
   font-family: Tahoma, Helvetica, Arial, sans-serif;
 }
+@media screen and (max-width: 600px) {
+    .container {
+        background-color: red;
+    }
+}
+@media screen and (max-width: 800px){
+    .card {
+        width: 100%;
+    }
+    .container {
+        flex-direction: column;
+        background-color: green;
+    }
+}
