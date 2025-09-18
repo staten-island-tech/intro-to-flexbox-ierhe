@@ -27,8 +27,8 @@ html,
 
 .img {
     object-fit: cover;
-    width: 18vw;
-    height: auto;
+    width: auto;
+    height: 13vw;
     padding: 1vw;
     display: flex;
     object-position: center;
