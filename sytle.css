@@ -5,9 +5,9 @@ html,
 }
 
 .card {
-    width: 22% auto;
-    height: 525px auto;
-    background-color: aqua;
+    width: 22%;
+    height: 525px;
+    background-color: rgb(168, 255, 214);
     margin: 20px auto;
     box-shadow: 5px 5px 5px rgb(0, 168, 190);
     border-radius: 10%; 
@@ -27,8 +27,8 @@ html,
 
 .img {
     object-fit: cover;
-    width: auto;
-    height: 13vw;
+    width: 90%;
+    height: 50%;
     padding: 1vw;
     display: flex;
     object-position: center;
