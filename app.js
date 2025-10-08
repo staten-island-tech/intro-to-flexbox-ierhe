@@ -70,14 +70,14 @@ const tapirs = [
         inStock: true,
     },
     {
-        category: "",
+        category: "land tapir",
         price: 5,
         img: "https://th.bing.com/th/id/R.de23c02c473cff5749d5ba12da563451?rik=OeGFz8FrehMo9Q&pid=ImgRaw&r=0",
         alt: "",
         inStock: true,
     },
     {
-        category: "",
+        category: "land tapir",
         price: 5,
         img: "https://tse2.mm.bing.net/th/id/OIP.mIeYTHwhEXEcb-lRNj-hvAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
         alt: "",
