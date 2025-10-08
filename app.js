@@ -1,20 +1,20 @@
 const tapirs = [
     {
-        category: "",
+        category: "water tapir",
         price: 5,
         img: "https://ideas.ted.com/wp-content/uploads/sites/3/2015/11/tapir_4_daniel-zupanc.jpg",
         alt: "",
         inStock: true,
     },
     {
-        category: "",
+        category: "grass tapir",
         price: 5,
         img: "https://th.bing.com/th/id/OIP.hvt0IDWKDsydPYZ0BLbTWQHaFA?w=286&h=193&c=7&r=0&o=7&pid=1.7&rm=3",
         alt: "",
         inStock: true,
     },
     {
-        category: "",
+        category: "land tapir",
         price: 5,
         img: "https://th.bing.com/th/id/OIP.UAeh2jRhxY2ouHOyOoRqhgHaEj?w=313&h=193&c=7&r=0&o=7&pid=1.7&rm=3",
         alt: "",
@@ -56,7 +56,7 @@ const tapirs = [
         inStock: true,
     },
     {
-        category: "baby",
+        category: "baby tapir",
         price: 5,
         img: "https://animals.sandiegozoo.org/sites/default/files/inline-images/tapir_baby_animals.jpg",
         alt: "",
@@ -140,3 +140,5 @@ const tapirs = [
         inStock: true,
     },
 ]
+
+tapirs.forEach((tapirs) => console.log(tapirs.category))
