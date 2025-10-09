@@ -141,4 +141,29 @@ const tapirs = [
     },
 ]
 
-tapirs.forEach((tapirs) => console.log(tapirs.category))
+// tapirs.forEach((tapirs) => console.log(tapirs.category))
+
+//create inject function 
+function inject(item){
+    //do something
+    //query the container
+    //using adjacent html push card into container
+    const container = document.querySelector(".contanier")
+    container.insertAdjacentHTML("afterbegin",
+        `<div class="card">
+        <img class="img" src="${tapirs.img}"/>
+            <div class="bodytext">
+                <h1>${tapirs.category}</h1>
+            </div>
+            <div class="bodytext">
+                <h3>${tapirs.price}</h3>
+            </div>
+            <button class="button">
+                <h2>Add to cart</h2>
+            </button>
+        </div>`
+    );
+}
+inject(tapirs[0]);
+//loop through items
+
