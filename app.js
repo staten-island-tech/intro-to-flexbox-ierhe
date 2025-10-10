@@ -1,5 +1,6 @@
 const tapirs = [
     {
+        name: "",
         category: "water tapir",
         price: 5,
         img: "https://ideas.ted.com/wp-content/uploads/sites/3/2015/11/tapir_4_daniel-zupanc.jpg",
@@ -7,6 +8,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "grass tapir",
         price: 5,
         img: "https://th.bing.com/th/id/OIP.hvt0IDWKDsydPYZ0BLbTWQHaFA?w=286&h=193&c=7&r=0&o=7&pid=1.7&rm=3",
@@ -14,6 +16,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",        
         category: "land tapir",
         price: 5,
         img: "https://th.bing.com/th/id/OIP.UAeh2jRhxY2ouHOyOoRqhgHaEj?w=313&h=193&c=7&r=0&o=7&pid=1.7&rm=3",
@@ -21,6 +24,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",        
         category: "dirt tapir",
         price: 5,
         img: "https://imgs.mongabay.com/wp-content/uploads/sites/20/2019/01/14064748/animals_00884-762x512.jpg",
@@ -28,6 +32,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",        
         category: "land tapir",
         price: 5,
         img: "https://tse1.mm.bing.net/th/id/OIP.V9aeKEmWPjvZHdMFwy9ixQHaFj?rs=1&pid=ImgDetMain&o=7&rm=3",
@@ -35,6 +40,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",        
         category: "land tapir",
         price: 5,
         img: "https://tse2.mm.bing.net/th/id/OIP.MBxRql-4XGYCLZjZgUAVoQHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
@@ -42,6 +48,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "grass tapir",
         price: 5,
         img: "https://th.bing.com/th/id/R.422d88ed33afff59dd4335534d9e5d96?rik=CYBya9UyEbnjog&pid=ImgRaw&r=0",
@@ -49,6 +56,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "grass tapir",
         price: 5,
         img: "https://www.worldatlas.com/r/w1200/upload/07/81/69/shutterstock-534346312.jpg",
@@ -56,6 +64,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "baby tapir",
         price: 5,
         img: "https://animals.sandiegozoo.org/sites/default/files/inline-images/tapir_baby_animals.jpg",
@@ -63,6 +72,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "water tapir",
         price: 5,
         img: "https://th.bing.com/th/id/R.b5722c2630fbe139a48024dd01a8aaed?rik=b4TSrEFqVwpfJw&pid=ImgRaw&r=0",
@@ -70,6 +80,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "land tapir",
         price: 5,
         img: "https://th.bing.com/th/id/R.de23c02c473cff5749d5ba12da563451?rik=OeGFz8FrehMo9Q&pid=ImgRaw&r=0",
@@ -77,6 +88,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "land tapir",
         price: 5,
         img: "https://tse2.mm.bing.net/th/id/OIP.mIeYTHwhEXEcb-lRNj-hvAHaE8?rs=1&pid=ImgDetMain&o=7&rm=3",
@@ -84,6 +96,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "water tapir",
         price: 5,
         img: "",
@@ -91,6 +104,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "water tapir",
         price: 5,
         img: "",
@@ -98,6 +112,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "water tapir",
         price: 5,
         img: "",
@@ -105,6 +120,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "baby tapir",
         price: 5,
         img: "",
@@ -112,6 +128,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "baby tapir",
         price: 5,
         img: "",
@@ -119,6 +136,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "baby tapir",
         price: 5,
         img: "",
@@ -126,6 +144,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "grass tapir",
         price: 5,
         img: "",
@@ -133,6 +152,7 @@ const tapirs = [
         inStock: true,
     },
     {
+        name: "",
         category: "grass tapir",
         price: 5,
         img: "",
@@ -144,7 +164,7 @@ const tapirs = [
 // tapirs.forEach((tapirs) => console.log(tapirs.category))
 
 //create inject function 
-function inject(item){
+function inject(tapirs){
     //do something
     //query the container
     //using adjacent html push card into container
