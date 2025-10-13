@@ -168,8 +168,8 @@ function inject(tapirs){
     //do something
     //query the container
     //using adjacent html push card into container
-    const container = document.querySelector(".contanier")
-    container.insertAdjacentHTML("afterbegin",
+    const container = document.querySelector(".container")
+    container.insertAdjacentHTML("beforeend",
         `<div class="card">
         <img class="img" src="${tapirs.img}"/>
             <div class="bodytext">
@@ -184,6 +184,7 @@ function inject(tapirs){
         </div>`
     );
 }
-inject(tapirs[0]);
+
+tapirs.forEach(inject);
 //loop through items
 
