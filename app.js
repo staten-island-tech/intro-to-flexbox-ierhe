@@ -163,11 +163,7 @@ const tapirs = [
 
 // tapirs.forEach((tapirs) => console.log(tapirs.category))
 
-//create inject function 
 function inject(tapirs){
-    //do something
-    //query the container
-    //using adjacent html push card into container
     const container = document.querySelector(".container")
     container.insertAdjacentHTML("beforeend",
         `<div class="card">
@@ -186,5 +182,3 @@ function inject(tapirs){
 }
 
 tapirs.forEach(inject);
-//loop through items
-
