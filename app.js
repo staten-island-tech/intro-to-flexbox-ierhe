@@ -183,27 +183,30 @@ function inject(tapirs){
 
 tapirs.forEach(inject);
 
-const Buttonpressed = document.querySelector("button");
+const Buttonpressed = document.getElementById("BabyTapirButton");
+const container = document.querySelector(".container");
 
 Buttonpressed.addEventListener("click", function() {
-  function inject(tapirs){
-    const container = document.querySelector(".container")
-        container.insertAdjacentHTML("beforeend",
-            `<div class="card">
-            <img class="img" src="${tapirs.img}"/>
-                <div class="bodytext">
-                    <h1>${((tapir) => tapir.category == baby.tapir)}</h1>
-                </div>
-                <div class="bodytext">
-                    <h3>${tapirs.price}</h3>
-                </div>
-                <button class="button">
-                    <h2>Add to cart</h2>
-                </button>
-            </div>`
-        );
-  }
-  inject(tapirs);
+    container.innerHTML = "";
+    const babyTapirs = tapirs.filter(tapir => tapir.category === "baby tapir");
+    function inject(tapirs){
+        const container = document.querySelector(".container")
+            container.insertAdjacentHTML("beforeend",
+                `<div class="card">
+                <img class="img" src="${tapirs.img}"/>
+                    <div class="bodytext">
+                        <h1>${tapirs.category}</h1>
+                    </div>
+                    <div class="bodytext">
+                        <h3>${tapirs.price}</h3>
+                    </div>
+                    <button class="button">
+                        <h2>Add to cart</h2>
+                    </button>
+                </div>`
+            );
+    }
+  babyTapirs.forEach(tapir => inject(tapir));
 });
 
 /* tapirs
