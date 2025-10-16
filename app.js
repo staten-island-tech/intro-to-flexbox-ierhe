@@ -183,8 +183,9 @@ function inject(tapirs){
 
 tapirs.forEach(inject);
 
-document.getElementById("button").addEventListener("click", function (e) {
-  e.preventDefault();
+const Buttonpressed = document.querySelector("button");
+
+button.addEventListener("click", function() {
   function inject(tapirs){
     const container = document.querySelector(".container")
         container.insertAdjacentHTML("beforeend",
@@ -209,3 +210,7 @@ document.getElementById("button").addEventListener("click", function (e) {
     .filter((tapir) => tapir.price < 10)
     .forEach((tapir) => console.log(tapir.category));
  */
+
+function addToCart() {
+
+}
