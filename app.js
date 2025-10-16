@@ -183,10 +183,10 @@ function inject(tapirs){
 
 tapirs.forEach(inject);
 
-const Buttonpressed = document.getElementById("BabyTapirButton");
+const ButtonBabyTapir = document.getElementById("BabyTapirButton");
 const container = document.querySelector(".container");
 
-Buttonpressed.addEventListener("click", function() {
+ButtonBabyTapir.addEventListener("click", function() {
     container.innerHTML = "";
     const babyTapirs = tapirs.filter(tapir => tapir.category === "baby tapir");
     function inject(tapirs){
