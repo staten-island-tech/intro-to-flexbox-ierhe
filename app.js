@@ -185,14 +185,14 @@ tapirs.forEach(inject);
 
 const Buttonpressed = document.querySelector("button");
 
-button.addEventListener("click", function() {
+Buttonpressed.addEventListener("click", function() {
   function inject(tapirs){
     const container = document.querySelector(".container")
         container.insertAdjacentHTML("beforeend",
             `<div class="card">
             <img class="img" src="${tapirs.img}"/>
                 <div class="bodytext">
-                    <h1>${filter((tapir) => tapir.category == baby.tapir)}</h1>
+                    <h1>${((tapir) => tapir.category == baby.tapir)}</h1>
                 </div>
                 <div class="bodytext">
                     <h3>${tapirs.price}</h3>
