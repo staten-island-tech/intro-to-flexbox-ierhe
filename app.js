@@ -163,6 +163,15 @@ const tapirs = [
 
 /* tapirs.forEach((tapirs) => console.log(tapirs.category)) */
 
+tapirs.forEach(inject);
+
+const AllBabyTapir = document.getElementById("AllTapirButton")
+const ButtonBabyTapir = document.getElementById("BabyTapirButton");
+const ButtonGrassTapir = document.getElementById("GrassTapirButton");
+const ButtonWaterTapir = document.getElementById("WaterTapirButton");
+const ButtonLandTapir = document.getElementById("LandTapirButton");
+const container = document.querySelector(".container");
+
 function inject(tapirs){
     const container = document.querySelector(".container")
     container.insertAdjacentHTML("beforeend",
@@ -181,32 +190,33 @@ function inject(tapirs){
     );
 }
 
-tapirs.forEach(inject);
-
-const ButtonBabyTapir = document.getElementById("BabyTapirButton");
-const container = document.querySelector(".container");
+AllBabyTapir.addEventListener("click", function() {
+    container.innerHTML = "";
+    tapirs.forEach(inject);
+});
 
 ButtonBabyTapir.addEventListener("click", function() {
     container.innerHTML = "";
     const babyTapirs = tapirs.filter(tapir => tapir.category === "baby tapir");
-    function inject(tapirs){
-        const container = document.querySelector(".container")
-            container.insertAdjacentHTML("beforeend",
-                `<div class="card">
-                <img class="img" src="${tapirs.img}"/>
-                    <div class="bodytext">
-                        <h1>${tapirs.category}</h1>
-                    </div>
-                    <div class="bodytext">
-                        <h3>${tapirs.price}</h3>
-                    </div>
-                    <button class="button">
-                        <h2>Add to cart</h2>
-                    </button>
-                </div>`
-            );
-    }
   babyTapirs.forEach(tapir => inject(tapir));
+});
+
+ButtonGrassTapir.addEventListener("click", function() {
+    container.innerHTML = "";
+    const grassTapirs = tapirs.filter(tapir => tapir.category === "grass tapir");
+  grassTapirs.forEach(tapir => inject(tapir));
+});
+
+ButtonWaterTapir.addEventListener("click", function() {
+    container.innerHTML = "";
+    const waterTapirs = tapirs.filter(tapir => tapir.category === "water tapir");
+  waterTapirs.forEach(tapir => inject(tapir));
+});
+
+ButtonLandTapir.addEventListener("click", function() {
+    container.innerHTML = "";
+    const landTapirs = tapirs.filter(tapir => tapir.category === "land tapir");
+  landTapirs.forEach(tapir => inject(tapir));
 });
 
 /* tapirs
