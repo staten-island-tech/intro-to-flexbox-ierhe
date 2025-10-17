@@ -224,7 +224,6 @@ function addToCart() {
     btnArray.forEach((btn) =>  
         btn.addEventListener("click", function (event){
             console.log(event.target.textcontent);
-            console.log(event.target.closest(".display-card").getAttribute("data-title")
-        })
-    };
+            console.log(event.target.closest(".display-card").getAttribute("data-title"));
+        }));
 }
