@@ -161,8 +161,6 @@ const tapirs = [
     },
 ]
 
-/* tapirs.forEach((tapirs) => console.log(tapirs.category)) */
-
 tapirs.forEach(inject);
 
 const AllBabyTapir = document.getElementById("AllTapirButton")
@@ -218,11 +216,6 @@ ButtonLandTapir.addEventListener("click", function() {
     const landTapirs = tapirs.filter(tapir => tapir.category === "land tapir");
   landTapirs.forEach(tapir => inject(tapir));
 });
-
-/* tapirs
-    .filter((tapir) => tapir.price < 10)
-    .forEach((tapir) => console.log(tapir.category));
- */
 
 function addToCart() {
 
