@@ -181,7 +181,7 @@ function inject(tapirs){
             <div class="bodytext">
                 <h3>$${tapirs.price}</h3>
             </div>
-            <button class="button">
+            <button id="AddToCart" class="button">
                 <h2>Add to cart</h2>
             </button>
         </div>`
@@ -218,7 +218,7 @@ ButtonLandTapir.addEventListener("click", function() {
 });
 
 function addToCart() {
-    const buttons = document.querySelector("button");
+    const buttons = document.querySelector("AddToCart");
     //create array if we need more than forEach
     const btnArray = Array.from(buttons);
     btnArray.forEach((btn) =>  
