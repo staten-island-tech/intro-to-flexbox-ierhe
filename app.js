@@ -1,6 +1,6 @@
 const tapirs = [
     {
-        name: "",
+        name: "tapir and seedweed",
         category: "water tapir",
         price: 20,
         img: "https://ideas.ted.com/wp-content/uploads/sites/3/2015/11/tapir_4_daniel-zupanc.jpg",
@@ -218,12 +218,12 @@ ButtonLandTapir.addEventListener("click", function() {
 });
 
 function addToCart() {
-    const buttons = document.querySelector("AddToCart");
+    const Cart = document.querySelector("AddToCart");
     //create array if we need more than forEach
-    const btnArray = Array.from(buttons);
+    const btnArray = Array.from(Cart);
     btnArray.forEach((btn) =>  
-        btn.addEventListener("click", function (event){
-            console.log(event.target.textcontent);
-            console.log(event.target.closest(".card").getAttribute("name"));
+        btn.addEventListener("click", function (){
+            
         }));
 }
+
