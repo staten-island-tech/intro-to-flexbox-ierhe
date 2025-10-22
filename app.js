@@ -217,12 +217,17 @@ ButtonLandTapir.addEventListener("click", function() {
   landTapirs.forEach(tapir => inject(tapir));
 });
 
+const AddToCart = document.getElementById("AddToCart")
+
 function addToCart() {
     const Cart = document.getElementById("AddToCart");
     const btnArray = Array.from(Cart);
     btnArray.forEach((btn) =>  
-        btn.addEventListener("click", function (){
-            console.log(Event.target.closest(".card").getAttribute("price"));
+        btn.addEventListener("click", function () { 
+            console.log(Event.target.closest(".card").getAttribute('.bodytext.tapirs.price'));
         }));
 }
 
+ButtonLandTapir.addEventListener("click", function() {
+    addToCart()
+});
