@@ -218,12 +218,11 @@ ButtonLandTapir.addEventListener("click", function() {
 });
 
 function addToCart() {
-    const Cart = document.querySelector("AddToCart");
-    //create array if we need more than forEach
+    const Cart = document.getElementById("AddToCart");
     const btnArray = Array.from(Cart);
     btnArray.forEach((btn) =>  
         btn.addEventListener("click", function (){
-            
+            console.log(Event.target.closest(".card").getAttribute("price"));
         }));
 }
 
