@@ -44,7 +44,25 @@ html,
     flex-wrap: wrap;
 }
 
+.AddToCart {
+    width: auto;
+    height: auto;
+    padding: 1vw;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
 .bodytext {
+    width: auto;
+    text-align: center;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
+.price {
     width: auto;
     text-align: center;
     font-family: Tahoma, Helvetica, Arial, sans-serif;
