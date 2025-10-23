@@ -175,7 +175,7 @@ function inject(tapirs){
     container.insertAdjacentHTML("beforeend",
         `<div class="card">
         <img class="img" src="${tapirs.img}"/>
-            <div class="bodytext">
+            <div class="Category">
                 <h1>${tapirs.category}</h1>
             </div>
             <div class="price">
@@ -229,9 +229,10 @@ function addToCart() {
         btn.addEventListener("click", function (event) { 
             const card = event.target.closest(".card");
             const price = (card.querySelector(".price").textContent);
+            const Catergory = (card.querySelector(".Category").textContent);
             const CartList = document.getElementById("cartList");
             const li = document.createElement("li");
-            li.textContent = `${price}`;
+            li.textContent = `${Catergory} - ${price}`;
             CartList.appendChild(li);
         }));
 }
