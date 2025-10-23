@@ -99,7 +99,7 @@ const tapirs = [
         name: "",
         category: "water tapir",
         price: 25,
-        img: "",
+        img: "https://tse4.mm.bing.net/th/id/OIP.bUJGKFNWxtm9hBLgxojQAQHaE6?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
         alt: "",
         inStock: true,
     },
@@ -107,7 +107,7 @@ const tapirs = [
         name: "",
         category: "water tapir",
         price: 15,
-        img: "",
+        img: "https://media.istockphoto.com/id/1146141198/photo/tapir-swimming-on-the-water-in-the-wildlife-sanctuary.jpg?s=612x612&w=0&k=20&c=G4WoNP-HNyHtIULB-MM_Fp_b0_XPY3nLl0RQ11Ta4dQ=",
         alt: "",
         inStock: true,
     },
@@ -115,7 +115,7 @@ const tapirs = [
         name: "",
         category: "water tapir",
         price: 5,
-        img: "",
+        img: "https://thumbs.dreamstime.com/b/brazilian-tapir-water-brazilian-tapir-water-thailand-157360068.jpg",
         alt: "",
         inStock: true,
     },
@@ -123,7 +123,7 @@ const tapirs = [
         name: "",
         category: "baby tapir",
         price: 25,
-        img: "",
+        img: "https://th.bing.com/th/id/OIP.huxROfDk1MHJMDWlCU_dPQHaEK?w=317&h=180&c=7&r=0&o=7&cb=12&pid=1.7&rm=3",
         alt: "",
         inStock: true,
     },
@@ -131,7 +131,7 @@ const tapirs = [
         name: "",
         category: "baby tapir",
         price: 20,
-        img: "",
+        img: "https://s.hdnux.com/photos/01/01/11/11/17076804/3/rawImage.jpg",
         alt: "",
         inStock: true,
     },
@@ -139,7 +139,7 @@ const tapirs = [
         name: "",
         category: "baby tapir",
         price: 30,
-        img: "",
+        img: "https://tse3.mm.bing.net/th/id/OIP.j6zJ11E9fCJU7dftuiaypAHaE8?cb=12&rs=1&pid=ImgDetMain&o=7&rm=3",
         alt: "",
         inStock: true,
     },
@@ -147,7 +147,7 @@ const tapirs = [
         name: "",
         category: "grass tapir",
         price: 45,
-        img: "",
+        img: "https://media.istockphoto.com/id/1464072172/photo/amazonian-tapir-standing-on-green-grass-at-the-zoo-with-blur-background.jpg?s=170667a&w=0&k=20&c=Q52zjyZt6xuArdicFcuTR-GA2BANYbLpYzz6PigWJQY=",
         alt: "",
         inStock: true,
     },
@@ -155,7 +155,7 @@ const tapirs = [
         name: "",
         category: "grass tapir",
         price: 50,
-        img: "",
+        img: "https://i.pinimg.com/originals/16/e6/ab/16e6ab37df09c844fa2e8ff6d3872098.jpg",
         alt: "",
         inStock: true,
     },
@@ -178,10 +178,10 @@ function inject(tapirs){
             <div class="bodytext">
                 <h1>${tapirs.category}</h1>
             </div>
-            <div class="bodytext">
+            <div class="price">
                 <h3>$${tapirs.price}</h3>
             </div>
-            <button id="AddToCart" class="button">
+            <button class="AddToCart">
                 <h2>Add to cart</h2>
             </button>
         </div>`
@@ -191,43 +191,50 @@ function inject(tapirs){
 AllBabyTapir.addEventListener("click", function() {
     container.innerHTML = "";
     tapirs.forEach(inject);
+    addToCart();
 });
 
 ButtonBabyTapir.addEventListener("click", function() {
     container.innerHTML = "";
     const babyTapirs = tapirs.filter(tapir => tapir.category === "baby tapir");
   babyTapirs.forEach(tapir => inject(tapir));
+  addToCart();
 });
 
 ButtonGrassTapir.addEventListener("click", function() {
     container.innerHTML = "";
     const grassTapirs = tapirs.filter(tapir => tapir.category === "grass tapir");
   grassTapirs.forEach(tapir => inject(tapir));
+  addToCart();
 });
 
 ButtonWaterTapir.addEventListener("click", function() {
     container.innerHTML = "";
     const waterTapirs = tapirs.filter(tapir => tapir.category === "water tapir");
   waterTapirs.forEach(tapir => inject(tapir));
+  addToCart();
 });
 
 ButtonLandTapir.addEventListener("click", function() {
     container.innerHTML = "";
     const landTapirs = tapirs.filter(tapir => tapir.category === "land tapir");
   landTapirs.forEach(tapir => inject(tapir));
+  addToCart();
 });
 
-const AddToCart = document.getElementById("AddToCart")
-
 function addToCart() {
-    const Cart = document.getElementById("AddToCart");
+    const Cart = document.querySelectorAll(".AddToCart");
     const btnArray = Array.from(Cart);
     btnArray.forEach((btn) =>  
-        btn.addEventListener("click", function () { 
-            console.log(Event.target.closest(".card").getAttribute('.bodytext.tapirs.price'));
+        btn.addEventListener("click", function (event) { 
+            const card = event.target.closest(".card");
+            const price = (card.querySelector(".price").textContent);
+            const CartList = document.getElementById("cartList");
+            const li = document.createElement("li");
+            li.textContent = `${price}`;
+            CartList.appendChild(li);
         }));
 }
 
-ButtonLandTapir.addEventListener("click", function() {
-    addToCart()
-});
+addToCart();
+
