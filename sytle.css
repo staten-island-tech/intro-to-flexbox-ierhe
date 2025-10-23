@@ -62,6 +62,15 @@ html,
     flex-wrap: wrap;
 }
 
+.Category {
+    width: auto;
+    text-align: center;
+    font-family: Tahoma, Helvetica, Arial, sans-serif;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .price {
     width: auto;
     text-align: center;
