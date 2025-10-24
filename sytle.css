@@ -40,8 +40,10 @@ html,
     height: auto;
     padding: 1vw;
     display: flex;
-    justify-content: center;
+    justify-content: space-between;
     flex-wrap: wrap;
+    border-radius: 5%;
+    margin: 25px;
 }
 
 .AddToCart {
