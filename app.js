@@ -231,9 +231,13 @@ function addToCart() {
             const price = (card.querySelector(".price").textContent);
             const Catergory = (card.querySelector(".Category").textContent);
             const CartList = document.getElementById("cartList");
+            const TotalList = document.getElementById("TotalList");
             const li = document.createElement("li");
+            const total = document.createElement("total");
+            total.textContent = `${price} += TotalList`;
             li.textContent = `${Catergory} - ${price}`;
             CartList.appendChild(li);
+            TotalList.appendChild(total);
         }));
 }
 
