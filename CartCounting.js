@@ -24,3 +24,7 @@ function checkCart(prod) {
 checkCart(prod);
 checkCart(prod);
 console.log(cart);
+
+let cartTotal = 0; 
+cart.forEach((item) => (cartTotal = cartTotal + item))
+console.log(cartTotal)
