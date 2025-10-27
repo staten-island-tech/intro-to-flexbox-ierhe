@@ -226,7 +226,7 @@ function addToCart() {
     const Cart = document.querySelectorAll(".AddToCart");
     const btnArray = Array.from(Cart);
     btnArray.forEach((btn) =>  
-        btn.addEventListener("click", function (event) { 
+        btn.addEventListener("click", function (event) {  
             const card = event.target.closest(".card");
             const price = (card.querySelector(".price").textContent);
             const Catergory = (card.querySelector(".Category").textContent);
@@ -234,7 +234,7 @@ function addToCart() {
             const TotalList = document.getElementById("TotalList");
             const li = document.createElement("li");
             const total = document.createElement("total");
-            total.textContent = (TotalList.textContent += price);
+            total = (TotalList.textContent += price);
             TotalList.innerHTML = "";
             li.textContent = `${Catergory} - ${price}`;
             CartList.appendChild(li);
