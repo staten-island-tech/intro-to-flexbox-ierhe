@@ -234,7 +234,7 @@ function addToCart() {
             const TotalList = document.getElementById("TotalList");
             const li = document.createElement("li");
             const total = document.createElement("total");
-            total.textContent = (TotalList.textContent += price);
+            total.textContent = (TotalList.textContent + price);
             TotalList.innerHTML = "";
             li.textContent = `${Catergory} - ${price}`;
             CartList.appendChild(li);
