@@ -26,12 +26,16 @@ html,
 }
 
 .moneycontainer {
-    width: 90vw;
+    width: 40vw;
     background-color: rgb(204, 245, 255);
     margin: 25px auto;
-    display: flex;
     justify-content: space-between;
     flex-wrap: wrap;
+    align-items: center;
+    padding-left: 1%;
+    padding-right: 1%;
+    padding-top: 0.5%;
+    padding-bottom: 0.5%;
 }
 
 .img {
