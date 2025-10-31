@@ -25,6 +25,15 @@ html,
     flex-wrap: wrap;
 }
 
+.moneycontainer {
+    width: 90vw;
+    background-color: rgb(204, 245, 255);
+    margin: 25px auto;
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+}
+
 .img {
     object-fit: cover;
     width: 90%;
