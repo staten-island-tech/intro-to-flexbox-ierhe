@@ -228,17 +228,18 @@ function addToCart() {
     btnArray.forEach((btn) =>  
         btn.addEventListener("click", function (event) {  
             const card = event.target.closest(".card");
-            const price = (card.querySelector(".price").textContent);
+            const priceText = (card.querySelector(".price").textContent);
             const Catergory = (card.querySelector(".Category").textContent);
+            const price = parseFloat(priceText.replace("$", ""));
+            const Oldprice = priceText;
             const CartList = document.getElementById("cartList");
             const TotalList = document.getElementById("TotalList");
             const li = document.createElement("li");
-            const total = document.createElement("total");
-            total.textContent = (TotalList.textContent + price);
-            TotalList.innerHTML = "";
-            li.textContent = `${Catergory} - ${price}`;
+            const currentTotal = parseFloat(TotalList.textContent) || 0;
+            const newTotal = currentTotal + price;
+            TotalList.textContent = newTotal;
+            li.textContent = `${Catergory} - ${Oldprice}`;
             CartList.appendChild(li);
-            TotalList.appendChild(total);
         }));
 }
 
